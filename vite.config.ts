@@ -6,7 +6,7 @@ import { defineConfig } from 'vite';
 export default defineConfig(() => {
   return {
     // Replace "my-portfolio" with your actual GitHub repository name
-    base: '/my-portfolio/',
+    base: '/',
 
     plugins: [react(), tailwindcss()],
     resolve: {
