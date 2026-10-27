@@ -13,8 +13,8 @@
 import { ProfileData } from '../types/profile';
 
 export const defaultProfile: ProfileData = {
-  id: 'elena-vance',
-  fullName: 'Elena Vance',
+  id: 'Omar Abu Alnasr',
+  fullName: 'Omar Abu Alnasr',
   monogram: 'EV',
   editorialIdentifier: 'RESEARCH IN INTELLIGENT SYSTEMS · MATHEMATICAL ONTOLOGIES',
   descriptor: 'Independent Researcher & Systems Architect',
@@ -53,9 +53,9 @@ export const defaultProfile: ProfileData = {
     },
   ],
   socialHandles: {
-    github: 'https://github.com',
-    youtube: 'https://youtube.com',
-    instagram: 'https://instagram.com',
+    github: 'hhttps://github.com/omarabualnasr',
+    youtube: 'https://www.youtube.com/@oasstudio',
+    instagram: 'https://www.instagram.com/oaasstudio/',
   },
   selectedWorks: [
     {
