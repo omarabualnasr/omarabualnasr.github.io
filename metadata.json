@@ -1,0 +1,6 @@
+{
+  "name": "The Personal Index — Editorial Digital Profile",
+  "description": "A bespoke editorial digital archive and personal profile featuring deliberate typographic hierarchy, curated exhibition case studies, and dual paper/ink themes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

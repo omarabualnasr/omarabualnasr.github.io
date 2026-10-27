@@ -1,0 +1,591 @@
+# BUILD A WORLD-CLASS PERSONAL PROFILE — NOT A GENERIC PORTFOLIO
+
+## 01 — YOUR ROLE AND THE MISSION
+
+Act as an elite multidisciplinary creative team consisting of:
+
+- An award-winning independent digital art director.
+- A world-class editorial and graphic designer.
+- A creative developer specializing in distinctive digital experiences.
+- A senior frontend engineer responsible for production-quality implementation.
+- A UX designer who understands personal identity, visual storytelling, and intuitive navigation.
+
+Your mission is to design and build a remarkable, fully functional personal profile website that feels individually art-directed, unusually memorable, sophisticated, creative, and professionally credible.
+
+This is not a standard portfolio template. It is not a business landing page. It is not a résumé with a modern skin. It is not a SaaS dashboard.
+
+It is a carefully composed digital representation of one person.
+
+The result must feel like a bespoke digital publication designed specifically for an individual by a highly respected design studio.
+
+The website should make someone exploring it think:
+
+"This feels personal, considered, original, and exceptionally well designed."
+
+The design must be creative enough to stand apart from conventional portfolio websites while remaining elegant, mature, readable, and usable.
+
+Do not simply describe the design you intend to make. Build the actual working application, implement the complete visual experience, and verify the result in the live preview.
+
+## 02 — IMPORTANT CONTEXT: A UNIVERSAL PERSONAL PROFILE
+
+This website must be completely independent of any particular academic, professional, artistic, or technical field.
+
+Do not assume that the person is a programmer, designer, entrepreneur, researcher, photographer, student, or business owner.
+
+Do not base the design around AI, mathematics, technology, photography, startups, or any other specific subject.
+
+The identity of the person comes first. Their interests, projects, experience, achievements, ideas, and future direction are content that can be added later.
+
+Design a flexible framework capable of representing a student, professional, independent creator, researcher, entrepreneur, artist, or any other individual without needing to redesign the entire experience.
+
+Use tasteful sample placeholders rather than inventing a biography, qualifications, awards, employment history, achievements, statistics, or personal details.
+
+The content architecture must make every important detail easy to personalize.
+
+The result should feel like a real person's profile, rather than a website generated from a portfolio checklist.
+
+## 03 — THE CREATIVE CONCEPT: "THE PERSONAL INDEX"
+
+Build the experience around the following original art direction:
+
+THE PERSONAL INDEX — A living, editorial archive of an individual.
+
+Treat the website as a carefully curated collection of personal identity, selected work, experiences, ideas, interests, and direction.
+
+Imagine a contemporary art publication, a beautifully typeset personal dossier, an independent design journal, and a digital exhibition combined into one coherent experience.
+
+The website must not literally imitate a book, folder, filing cabinet, or physical document. These are conceptual references, not props to reproduce.
+
+Instead, translate the qualities of exceptional editorial design into a digital-native interface:
+
+- Deliberate asymmetry.
+- Expressive typography.
+- Unexpected but balanced proportions.
+- Small, precise annotations.
+- Generous negative space.
+- Carefully controlled visual tension.
+- A combination of large expressive elements and tiny informational details.
+- Sections that have individual visual identities while belonging to one larger composition.
+- An interplay between the personal and the professional.
+- Subtle interactive details that reward exploration.
+
+The design should have an identifiable visual idea that continues throughout the entire experience.
+
+Avoid assembling unrelated design trends. Every visual element must have a reason to exist.
+
+## 04 — ART DIRECTION AND VISUAL IDENTITY
+
+Create a distinctive visual system with a restrained but recognizable personality.
+
+### Color direction
+
+Use a warm editorial background similar to a refined paper surface, a deep near-black ink color, restrained neutral grays, and one vivid accent color such as vermilion, vivid orange-red, or a carefully selected electric blue.
+
+Suggested starting palette:
+
+- Background: #F4F1EA
+- Main text: #20211F
+- Secondary text: #77766F
+- Fine rules: #D6D1C7
+- Accent: #F15A38
+- Optional dark section background: #20211F
+
+Treat these as starting points rather than rigid requirements. Refine the palette if needed, but preserve contrast, coherence, and a clear accent hierarchy.
+
+Do not use a generic purple-blue AI gradient.
+
+Do not use excessive neon, rainbow gradients, glowing blobs, translucent glass cards, or random decorative gradients.
+
+A carefully placed accent should have more impact than an entire screen covered in color.
+
+### Typography
+
+Use typography as a principal design element, not merely as a way to display text.
+
+Develop a deliberate pairing of:
+
+1. An expressive, contemporary sans-serif for display typography, headings, navigation, and labels.
+2. A contrasting editorial serif for selected statements, quotes, reflections, or smaller moments of personality.
+3. A restrained monospaced style for metadata, section numbers, dates, coordinates, and micro-labels.
+
+Potential font combinations include Space Grotesk with Newsreader or Manrope with Instrument Serif.
+
+Choose the pairing that best supports the visual concept.
+
+Use very large display typography selectively, including an unusually composed treatment of the person's name.
+
+Create meaningful changes in type size, weight, alignment, and line length.
+
+Do not make every section heading look identical.
+
+Every line break in the main introduction should look intentional. Avoid awkward wrapping and overlapping text.
+
+### Composition
+
+Use an editorial grid that can deliberately break its own alignment in specific places.
+
+Create a mix of:
+
+- Wide open typographic areas.
+- Narrow columns of personal annotations.
+- Offset image compositions.
+- Full-width visual moments.
+- Compact metadata strips.
+- Small, meticulously aligned navigation details.
+- Generous breathing space around important content.
+
+Use fine rules, section numbers, restrained geometry, and occasional graphic marks where appropriate.
+
+Keep the composition asymmetrical without becoming disorganized.
+
+The page must still look polished when someone sees only a screenshot.
+
+### Imagery
+
+Support a genuine personal portrait, photographs, project images, illustrations, and other media.
+
+Do not invent a face or use an unrelated stock photograph as if it were the owner's portrait.
+
+When no personal photograph is supplied, build an intentional typographic or abstract image treatment that looks finished without one.
+
+For project entries without images, generate attractive visual compositions using CSS, SVG, typography, simple geometry, or existing project assets. These should look like deliberately art-directed visual studies rather than empty image boxes.
+
+Keep all media replaceable.
+
+## 05 — THE STRUCTURE: A PROFILE, NOT A CONVENTIONAL LANDING PAGE
+
+The following are content responsibilities, not instructions to create a series of ordinary stacked sections.
+
+Organize them into a distinctive editorial composition.
+
+### A. The opening composition — Identity
+
+The opening viewport is the signature moment of the website.
+
+It should immediately establish the person's identity and the character of the entire experience.
+
+Include:
+
+- A small, understated identity marker or monogram.
+- A carefully designed primary navigation system.
+- The person's name as the dominant typographic element.
+- A short, editable personal statement.
+- An optional portrait or abstract personal visual.
+- One concise contextual detail, such as a location, current focus, or personal descriptor.
+- A quiet invitation to explore the profile.
+
+Do not write a long, generic hero paragraph.
+
+Do not center every element in a conventional hero layout.
+
+Do not use the familiar left-aligned headline plus right-aligned floating glass card composition.
+
+Instead, create a visually distinctive arrangement using the page grid, carefully proportioned text, intentional empty space, and one recognizable graphic gesture.
+
+Explore unconventional alignment, oversized cropped lettering where appropriate, an offset portrait, or a small editorial annotation that adds personality.
+
+Maintain excellent readability and avoid clipping essential text.
+
+The first screen should be immediately memorable, without needing an elaborate animation.
+
+### B. The personal statement — Beyond the headline
+
+Create an intimate but professionally presented introduction.
+
+This is where the person explains how they see themselves, what matters to them, what they care about, and what direction they are exploring.
+
+Do not reduce it to a generic "About Me" card.
+
+Consider a magazine-style composition with an expressive statement, a restrained block of supporting text, and one or two small personal annotations.
+
+Allow the main statement to be edited independently of the supporting biography.
+
+The content must be suitable for both personal and professional audiences.
+
+### C. Selected work — A curated exhibition
+
+Present projects, accomplishments, creative work, initiatives, or other meaningful contributions as a curated collection.
+
+Do not use a standard three-column card grid.
+
+Instead, create a visual rhythm that can include:
+
+- One featured project occupying a large portion of the layout.
+- Smaller supporting projects arranged with different proportions.
+- Project numbers and carefully typeset metadata.
+- Meaningful distinctions between project types.
+- Visually rich project previews.
+- Short descriptions focused on the purpose, process, and outcome.
+- Optional dates, roles, collaborators, and relevant links.
+
+Each project should feel like a small editorial feature.
+
+When a project is selected, open a beautifully designed case-study view, modal, or dedicated route.
+
+That view should support a project overview, context, objectives, approach, process, results, relevant media, and external links.
+
+Only display information that exists in the project's data. Do not fabricate metrics or success stories.
+
+Allow projects to be added, removed, reordered, and marked as featured through a central data file.
+
+If project categories are supplied, provide a subtle, functional filtering interaction. Do not introduce category labels that falsely assume a particular profession.
+
+### D. The trajectory — A personal timeline
+
+Provide a thoughtful way to represent meaningful stages, experiences, education, milestones, or transitions.
+
+Avoid the ordinary vertical timeline made of identical cards connected by a line.
+
+Consider a more editorial treatment using dates in a narrow margin, short descriptive entries, irregular spacing, and occasional featured moments.
+
+The timeline must work whether the person has two milestones or twenty.
+
+Do not invent events, institutions, dates, titles, or credentials.
+
+Make this entire area optional so it can be hidden when the owner has nothing to include.
+
+### E. The person behind the work
+
+Create a visually distinct space for the person's interests, principles, inspirations, curiosities, working philosophy, or other details that communicate personality.
+
+Keep the framework universal.
+
+The owner might eventually include hobbies, personal projects, intellectual interests, favorite subjects, causes, books, experiences, or ideas.
+
+Do not assume which of these applies.
+
+Use editorial labels, expressive text, visual groupings, and carefully selected small interactions instead of a wall of icons.
+
+This section should bring a human dimension to the website without feeling forced or overly informal.
+
+### F. Capabilities and strengths
+
+Provide an optional way to communicate skills, strengths, areas of experience, or subjects of interest.
+
+Do not use circular percentage indicators, progress bars, invented proficiency ratings, or a generic wall of technology logos.
+
+Present items as a carefully composed typographic index, grouped list, compact collection of labels, or another distinctive visual treatment.
+
+Allow the owner to choose the categories and content.
+
+Include only real, editable information.
+
+If the section has no content, hide it cleanly.
+
+### G. Recognition and selected highlights
+
+Create an optional compact region for awards, certifications, publications, recognition, or other verifiable milestones.
+
+Use a restrained visual treatment that communicates importance without exaggeration.
+
+Never generate fake credentials, institutional affiliations, statistics, or awards.
+
+Do not force the owner to fill this section in order for the overall layout to look complete.
+
+### H. The closing composition — Get in touch
+
+The closing section must feel like a deliberate conclusion to the experience rather than a generic contact form appended to the bottom.
+
+Return to the visual language of the opening composition.
+
+Use expressive typography, generous whitespace, and a concise invitation to make contact.
+
+Support an editable email address, selected social profiles, and other links supplied by the owner.
+
+Include a direct email action, a working copy-email interaction, and an understated footer with a copyright year.
+
+Do not include fake telephone numbers, fake social accounts, or nonexistent résumé downloads.
+
+If no email address or external profile is configured, do not display a broken or misleading action.
+
+## 06 — A SIGNATURE INTERACTION: THE EDITORIAL INDEX RAIL
+
+Create a custom navigation experience that reinforces the concept of a personal index.
+
+On desktop, consider a discreet fixed or floating index rail containing section numbers, short labels, and a clear active-section indicator.
+
+The rail must feel like an editorial navigation device, not a dashboard sidebar.
+
+It should occupy very little visual space.
+
+When the user navigates to a section:
+
+- Move smoothly to the relevant location.
+- Update the active section indicator.
+- Preserve correct browser history behavior where relevant.
+- Respect reduced-motion preferences.
+- Never obscure important text or content.
+
+Use a robust scroll-observation mechanism to track the active section.
+
+On mobile, transform the navigation into an appropriate compact interface rather than shrinking the desktop rail.
+
+Not every section needs to be visible in the navigation. Prioritize clarity.
+
+Add a subtle reading-progress indicator if it enhances the experience.
+
+Every navigation control must work.
+
+## 07 — MICROINTERACTIONS AND MOTION
+
+Motion should communicate hierarchy, provide feedback, and make the interface feel carefully crafted.
+
+It must never become a substitute for good design.
+
+Implement a small set of refined interactions:
+
+1. A short, tasteful entrance treatment for the opening typography.
+2. Subtle section reveals using restrained opacity and positional changes.
+3. Clean hover responses for interactive project previews.
+4. Smooth transitions when a project detail view opens or closes.
+5. A useful indication of the currently viewed section.
+6. Small feedback animations for actions such as copying an email address.
+7. A graceful mobile navigation transition.
+
+Use varied timing only when justified by the interaction.
+
+Keep animations short, controlled, and unobtrusive.
+
+Do not animate every word individually.
+
+Do not use perpetual floating objects, artificial particle effects, unnecessary parallax, distracting custom cursors, or long cinematic loading screens.
+
+Never delay access to the actual content while waiting for an animation.
+
+Respect the prefers-reduced-motion media query and provide accessible alternatives.
+
+## 08 — AN OPTIONAL SECOND VISUAL MODE
+
+Consider adding a discreet theme control that allows the user to switch between two professionally designed appearances:
+
+- The primary warm editorial theme.
+- A contrasting dark ink theme.
+
+Both modes must be fully designed, not merely produced by inverting colors.
+
+Maintain appropriate text contrast, project-image visibility, subtle borders, and consistent visual hierarchy in both themes.
+
+Persist the user's choice locally if appropriate.
+
+Make the control understandable and keyboard accessible.
+
+If the second theme compromises the quality or coherence of the main design, prioritize the primary theme instead.
+
+## 09 — TECHNICAL IMPLEMENTATION
+
+Build a real, runnable web application using React and TypeScript where supported by the environment.
+
+Use a clean, modular structure with reusable components and a coherent design system.
+
+Prefer the framework and tooling already configured by Google AI Studio rather than replacing its setup unnecessarily.
+
+Use CSS modules, regular CSS, or the existing styling solution. Choose the simplest maintainable approach for precise visual control.
+
+Use an appropriate icon library only when icons genuinely improve usability. Avoid replacing meaningful design elements with generic icon collections.
+
+Create a centralized, typed profile data file, for example:
+
+src/data/profile.ts
+
+This file should contain the editable profile information, project records, timeline entries, capabilities, interests, contact links, and theme preferences where appropriate.
+
+Organize the code into logical components, such as:
+
+- Profile introduction.
+- Editorial navigation.
+- Personal statement.
+- Selected work.
+- Project details.
+- Personal trajectory.
+- Personal interests.
+- Capabilities.
+- Contact composition.
+- Footer.
+
+Use a suitable approach for the application structure; these names are examples, not a requirement to create excessive components.
+
+Add clear comments to the profile data showing exactly where the owner can insert their information and assets.
+
+Make it possible to edit the website's content without having to hunt through multiple component files.
+
+Provide an assets directory or equally clear asset-management approach.
+
+Use relative asset paths and make it straightforward to replace the portrait, project visuals, and other images.
+
+Do not introduce a database, authentication, server, API integration, or paid service when the portfolio does not need one.
+
+Do not use the Gemini API to render an otherwise static personal profile.
+
+Do not expose secrets or create unnecessary backend dependencies.
+
+The result should be straightforward to export, maintain, and publish.
+
+## 10 — PRODUCTION-QUALITY RESPONSIVE DESIGN
+
+The design must be fully responsive, not just a desktop mockup that has been squeezed onto a mobile screen.
+
+Build and check these layout ranges:
+
+- Large desktop: approximately 1440px and wider.
+- Standard laptop: approximately 1024–1439px.
+- Tablet: approximately 768–1023px.
+- Mobile: approximately 360–767px.
+
+These are testing targets, not rigid breakpoints.
+
+On desktop, take advantage of deliberate composition, spacious typography, asymmetrical grids, and margin annotations.
+
+On tablet, rebalance the composition without losing its personality.
+
+On mobile, make the layout feel intentionally redesigned for a narrow display. Recompose typography, reorder content when necessary, simplify decorative details, and maintain elegant spacing.
+
+Prevent horizontal overflow, inaccessible navigation, clipped controls, overlapping text, awkwardly wrapped titles, and images that distort their proportions.
+
+Every section must remain coherent at all supported widths.
+
+Do not sacrifice usability to preserve a desktop-only art direction.
+
+## 11 — ACCESSIBILITY AND USABILITY
+
+Implement semantic HTML and accessible interaction patterns.
+
+Include:
+
+- Correct heading hierarchy.
+- Keyboard-accessible navigation and controls.
+- Clear, visible focus states.
+- Sufficient color contrast.
+- Descriptive link and button labels.
+- Appropriate alt text for meaningful images.
+- Accessible dialog behavior for project details.
+- Escape-key support where relevant.
+- Correct focus management when opening and closing overlays.
+- Reduced-motion support.
+- Functional browser back and forward behavior where appropriate.
+
+Do not communicate meaning through color alone.
+
+Avoid tiny body text and excessively long line lengths.
+
+Make the website usable without requiring a mouse or animation.
+
+## 12 — PERFORMANCE AND CODE QUALITY
+
+Optimize for a fast, dependable experience.
+
+Avoid unnecessary dependencies, excessive client-side code, enormous images, expensive rendering effects, and uncontrolled animation loops.
+
+Load images efficiently and preserve their aspect ratios.
+
+Use appropriate lazy loading for content below the initial viewport.
+
+Prevent layout shifts where reasonably possible.
+
+Keep the console free of avoidable runtime errors and warnings.
+
+Make all routes, buttons, modal actions, links, filters, and theme controls work as intended.
+
+External links should use the correct destinations and appropriate security attributes.
+
+Use real email links rather than decorative buttons with no action.
+
+Do not implement a fake contact form. If a message form is included, make its submission functional using an explicitly configured service; otherwise, keep contact direct through email.
+
+Ensure that the application starts correctly and that the code is maintainable.
+
+## 13 — STRICT DESIGN RULES: WHAT NOT TO BUILD
+
+The following outcomes are unacceptable:
+
+- A generic AI-generated portfolio template.
+- A typical hero, three-column cards, skills grid, and contact-form layout.
+- A SaaS landing page disguised as a personal profile.
+- A conventional résumé page with oversized typography.
+- A dashboard aesthetic.
+- A page made entirely from rounded cards.
+- Glassmorphism everywhere.
+- Purple gradients and glowing blobs.
+- Random decorative circles with no purpose.
+- Excessive pill-shaped labels.
+- Generic stock photography used to impersonate the owner.
+- An icon grid presented as a substitute for content.
+- Artificial skill percentages.
+- Fake testimonials, numbers, awards, employment, or achievements.
+- Placeholder links that appear functional but do nothing.
+- Excessively animated typography that damages readability.
+- Artificial minimalism consisting of almost no content and a giant name.
+- A visually chaotic composition that confuses users.
+- A design that looks impressive only in a single screenshot but breaks when used.
+- A theme dependent on a large collection of external services.
+
+Most importantly, do not confuse "unusual" with "good."
+
+Originality must come from composition, typography, pacing, interaction, art direction, and a consistent design concept.
+
+The website should feel mature enough for professional introductions and distinctive enough to remain memorable.
+
+## 14 — FINAL QUALITY BAR
+
+Before considering the application complete, evaluate it against the following criteria.
+
+VISUAL IDENTITY
+
+Does the opening screen look recognizable and individually art-directed?
+
+Does the layout feel custom-composed rather than assembled from a common website template?
+
+Do typography, color, spacing, and imagery work together as one coherent system?
+
+CONTENT AND STRUCTURE
+
+Does the experience communicate the person before presenting a list of achievements?
+
+Can the owner personalize it for any field?
+
+Do optional sections disappear cleanly when they have no information?
+
+FUNCTIONALITY
+
+Do all navigation items, project interactions, filters, contact actions, theme controls, and overlays work?
+
+Is the website usable on touchscreens and keyboards?
+
+RESPONSIVENESS
+
+Does the composition look intentional on mobile, tablet, laptop, and desktop?
+
+Are there any layout overflows, clipped elements, or broken interactions?
+
+TECHNICAL QUALITY
+
+Does the application compile and run?
+
+Are there avoidable console errors, broken assets, or missing routes?
+
+Is the profile content centralized and easy to edit?
+
+If any important criterion fails, fix it before declaring the work complete.
+
+## 15 — EXECUTION INSTRUCTIONS
+
+Begin by translating this brief into a strong, coherent creative direction.
+
+Make the visual decisions yourself. Do not ask me to choose between generic design options.
+
+Then implement the entire working application.
+
+Prioritize the opening composition, typography, visual rhythm, and editorial navigation first. Build the rest of the profile to the same standard.
+
+Use the available preview to inspect the actual result. Where testing tools are available, verify the main interactions and responsive layouts. Fix issues you discover rather than merely reporting them.
+
+Do not stop after creating a wireframe, a design plan, a static image, or a minimal prototype.
+
+Do not return only a component outline or a description of the code.
+
+Build the website itself, with real components, real styling, working interactions, sensible placeholder data, and a clean project structure.
+
+If a feature cannot be implemented reliably within the available environment, provide a clean, functional alternative rather than a misleading visual imitation.
+
+The finished result should feel like a distinctive piece of personal digital design: expressive but restrained, original but usable, polished but human.
+
+**THE FINAL TEST: If the name were replaced with someone else's, would the page still look like the same generic portfolio? The design system may remain consistent, but the composition, content, image choices, and editable personal details should be capable of giving each individual a distinct identity. Build a framework that makes that possible.**

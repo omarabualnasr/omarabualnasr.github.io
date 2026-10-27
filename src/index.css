@@ -1,0 +1,343 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #07090C;
+    --bg-surface-elevated: #0B0E12;
+    --bg-surface-active: #10141A;
+    --text-primary: #F1EFE9;
+    --text-secondary: #8E98A5;
+    --text-tertiary: #525D6B;
+    --border-subtle: rgba(241, 239, 233, 0.12);
+    --border-active: rgba(241, 239, 233, 0.22);
+    --accent-cyan-restrained: #D8F3FF;
+    --light-gradient: radial-gradient(ellipse 360px 180px at var(--light-x, 50%) var(--light-y, 50%), #FFFFFF 0%, rgba(255, 255, 255, 0.96) 22%, rgba(216, 243, 255, 0.82) 42%, rgba(139, 232, 255, 0.28) 60%, transparent 78%);
+    --light-drop-shadow: drop-shadow(0 0 16px rgba(216, 243, 255, 0.65)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.95));
+    --icon-bg: rgba(11, 14, 18, 0.9);
+    --icon-border: rgba(241, 239, 233, 0.14);
+    --dot-color: #D8F3FF;
+    --cursor-dot: #F1EFE9;
+    --cursor-ring: rgba(241, 239, 233, 0.4);
+    --cursor-ring-hover: #D8F3FF;
+    --cursor-shadow-rest: 0 0 6px rgba(241, 239, 233, 0.2);
+    --cursor-shadow-hover: 0 0 14px rgba(216, 243, 255, 0.45);
+    --cursor-ambient: radial-gradient(circle, rgba(216, 243, 255, 0.04) 0%, rgba(255, 255, 255, 0.015) 45%, transparent 70%);
+  }
+
+  html.theme-light {
+    --bg-canvas: #F5F3EC;
+    --bg-surface-elevated: #FFFFFF;
+    --bg-surface-active: #EAE6DC;
+    --text-primary: #121417;
+    --text-secondary: #4A525D;
+    --text-tertiary: #788290;
+    --border-subtle: rgba(18, 20, 23, 0.14);
+    --border-active: rgba(18, 20, 23, 0.28);
+    --accent-cyan-restrained: #121417;
+    --light-gradient: radial-gradient(ellipse 360px 180px at var(--light-x, 50%) var(--light-y, 50%), #121417 0%, rgba(18, 20, 23, 0.95) 25%, rgba(60, 65, 75, 0.8) 48%, rgba(120, 130, 145, 0.25) 70%, transparent 85%);
+    --light-drop-shadow: none;
+    --icon-bg: rgba(255, 255, 255, 0.95);
+    --icon-border: rgba(18, 20, 23, 0.16);
+    --dot-color: #121417;
+    --cursor-dot: #0F172A;
+    --cursor-ring: rgba(15, 23, 42, 0.6);
+    --cursor-ring-hover: #0F172A;
+    --cursor-shadow-rest: none;
+    --cursor-shadow-hover: none;
+    --cursor-ambient: transparent;
+  }
+
+  html {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+}
+
+/* 
+   Refined Theme Transition 
+   We only transition background, color, and borders on specific structural elements.
+   This avoids clashing with marquee/shimmer animations on text/transforms.
+*/
+.theme-transition,
+.theme-transition body,
+.theme-transition main,
+.theme-transition nav,
+.theme-transition footer,
+.theme-transition .transition-target {
+  transition: background-color 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+              color 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hide default OS cursor on desktop fine-pointer devices so only custom cursor appears */
+@media (hover: hover) and (pointer: fine) {
+  *,
+  *::before,
+  *::after,
+  html,
+  body,
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea {
+    cursor: none !important;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+.font-sans-editorial {
+  font-family: 'Manrope', system-ui, sans-serif;
+}
+
+.font-mono-metadata {
+  font-family: 'IBM Plex Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Architectural Tactile Background Texture & Grain Overlay */
+.architectural-tactile-grid {
+  background-image: 
+    radial-gradient(rgba(241, 239, 233, 0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgba(241, 239, 233, 0.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(241, 239, 233, 0.018) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px, 48px 48px;
+}
+
+html.theme-light .architectural-tactile-grid {
+  background-image: 
+    radial-gradient(rgba(18, 20, 23, 0.07) 1px, transparent 1px),
+    linear-gradient(to right, rgba(18, 20, 23, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18, 20, 23, 0.025) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px, 48px 48px;
+}
+
+.grain-subtle {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.038'/%3E%3C/svg%3E");
+}
+
+html.theme-light .grain-subtle {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.048'/%3E%3C/svg%3E");
+}
+
+/* Tactile Live Text Texture & Organic Sheen */
+@keyframes textShimmerLive {
+  0%, 100% {
+    background-position: 0 0, 0% 0%;
+  }
+  50% {
+    background-position: 100px 100px, 100% 0%;
+  }
+}
+
+.text-tactile-live {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='textNoiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23textNoiseFilter)' opacity='0.22'/%3E%3C/svg%3E"),
+    linear-gradient(110deg, var(--text-primary) 0%, var(--text-primary) 35%, var(--accent-cyan-restrained) 50%, var(--text-primary) 65%, var(--text-primary) 100%);
+  background-size: 160px 160px, 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: textShimmerLive 9s ease-in-out infinite;
+}
+
+.text-live-grain {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='textGrainFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23textGrainFilter)' opacity='0.16'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, var(--text-primary) 0%, var(--text-primary) 100%);
+  background-size: 180px 180px, 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* Marquee Continuous Ticker Animation */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  will-change: transform;
+  animation: marquee 16s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+/* Cascade Entrance Transition Animation */
+@keyframes cascadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0px);
+  }
+}
+
+.animate-cascade-in {
+  opacity: 0;
+  animation: cascadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-cascade-in {
+    opacity: 1;
+    animation: none;
+    transform: none;
+    filter: none;
+  }
+}
+
+/* Overlay Content Entrance */
+@keyframes overlayContentIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-overlay-content {
+  animation: overlayContentIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Base Animation Primitives */
+.animate-in {
+  animation-duration: 700ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: forwards;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.slide-in-from-bottom-4 {
+  animation-name: slideInFromBottom;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+  from { transform: translate3d(0, 1rem, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes themeWash {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.04);
+    filter: blur(8px);
+  }
+}
+
+.animate-theme-wash {
+  animation: themeWash 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-out {
+  animation-duration: 800ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: forwards;
+}
+
+.fade-out {
+  animation-name: fadeOut;
+}
+
+/* Smooth Zoom Motion Blur Entrance & Exit */
+@keyframes zoomMotionBlurIn {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+    filter: blur(16px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes zoomMotionBlurOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.94);
+    filter: blur(16px);
+  }
+}
+
+.animate-zoom-blur-in {
+  animation: zoomMotionBlurIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-zoom-blur-out {
+  animation: zoomMotionBlurOut 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
