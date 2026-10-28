@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import profilePic from '../data/Profile Pic.jpg';
 
 interface IdentityCardProps {
   fullName: string;
@@ -57,11 +58,11 @@ export const IdentityCard: React.FC<IdentityCardProps> = ({ fullName, isLightMod
         }`}
       >
         <div className={`w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full border border-[var(--border-subtle)] overflow-hidden ${isLightMode ? '' : 'shadow-2xl'}`}>
-          <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=400&auto=format&fit=crop" 
+          <img
+            src={profilePic}
             alt="Profile portrait"
             className="w-full h-full object-cover"
-          />
+            />
         </div>
       </div>
     </div>
