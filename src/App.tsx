@@ -13,6 +13,7 @@ import { ArrowUpRight, Github, Youtube, Instagram, Share2, Check } from 'lucide-
 export default function App() {
   const [profile] = useState<ProfileData>(defaultProfile);
   const [activeOverlay, setActiveOverlay] = useState<OverlayType>(null);
+  const [isOverlayClosing, setIsOverlayClosing] = useState(false);
   const [copiedShare, setCopiedShare] = useState(false);
   const [isLightMode, setIsLightMode] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
@@ -51,7 +52,21 @@ export default function App() {
     return () => window.removeEventListener('dblclick', handleDblClick);
   }, []);
 
-  // 3. Share Profile handler (Web Share API with Clipboard fallback)
+  // 3. Smooth Overlay Open & Close with Optical Motion Blur Coordination
+  const handleOpenOverlay = (type: OverlayType) => {
+    setIsOverlayClosing(false);
+    setActiveOverlay(type);
+  };
+
+  const handleCloseOverlay = () => {
+    setIsOverlayClosing(true);
+    setTimeout(() => {
+      setActiveOverlay(null);
+      setIsOverlayClosing(false);
+    }, 420); // Synchronized with 0.42s exit animation duration
+  };
+
+  // 4. Share Profile handler (Web Share API with Clipboard fallback)
   const handleShareProfile = () => {
     const shareData = {
       title: `${profile.fullName} — Digital Portfolio`,
@@ -108,13 +123,15 @@ export default function App() {
       <div className="architectural-tactile-grid absolute inset-0 z-1 pointer-events-none opacity-60" />
       <div className="grain-subtle absolute inset-0 z-1 pointer-events-none opacity-40" />
 
-      {/* Exact Visual Center Composition (Unified Group) */}
+      {/* Exact Visual Center Composition (Unified Group with Motion Blur Coordination) */}
       <main className={`relative z-10 my-auto flex-1 flex flex-col items-center justify-center text-center w-full max-w-3xl mx-auto px-4 transition-all duration-700 ease-in-out ${
-        activeOverlay ? 'opacity-0 scale-[0.98] blur-sm pointer-events-none' : 'opacity-100 scale-100 blur-0'
+        activeOverlay && !isOverlayClosing 
+          ? 'opacity-0 scale-[0.98] blur-sm pointer-events-none' 
+          : 'opacity-100 scale-100 blur-0'
       }`}>
         {/* Animated "Building the Future" Continuous Ticker */}
         <div
-          className="w-full max-w-[280px] sm:max-w-[420px] md:max-w-[540px] overflow-hidden py-1 mb-3 sm:mb-4 select-none animate-cascade-in"
+          className="w-full max-w-[280px] sm:max-w-[420px] md:max-w-[540px] overflow-hidden py-1 mb-2 sm:mb-3 select-none animate-cascade-in"
           style={{ animationDelay: '100ms' }}
         >
           <div className="inline-flex whitespace-nowrap animate-marquee">
@@ -137,39 +154,39 @@ export default function App() {
           </div>
         </div>
 
-        {/* Main Name with Interactive Identity Card Transition */}
+        {/* Main Name with Interactive Identity Card Transition & Centered Star */}
         <div
-          className="mb-8 sm:mb-10 flex justify-center w-full animate-cascade-in"
+          className="mb-3 sm:mb-3.5 flex justify-center w-full animate-cascade-in"
           style={{ animationDelay: '220ms' }}
         >
           <IdentityCard fullName={profile.fullName} isLightMode={isLightMode} />
         </div>
 
-        {/* Concise Professional Direction / Academic Interest */}
+        {/* 1. Core Focus: Math · AI · Biology (Positioned first, directly under the star) */}
         <p
-          className="font-sans-editorial text-lg sm:text-xl md:text-2xl text-[var(--text-primary)] text-live-grain font-light leading-relaxed max-w-2xl mx-auto mb-2 sm:mb-3 text-balance animate-cascade-in"
+          className="font-sans-editorial text-xs sm:text-sm md:text-base text-[var(--text-primary)] text-live-grain font-light leading-snug max-w-xl mx-auto mb-1.5 sm:mb-2 px-4 text-balance animate-cascade-in"
           style={{ animationDelay: '340ms' }}
         >
           {profile.professionalDirection}
         </p>
 
-        {/* Short Supporting Introduction */}
+        {/* 2. Supporting Statement (Positioned second, close to the core focus) */}
         <p
-          className="font-sans-editorial text-sm sm:text-base text-[var(--text-secondary)] font-light leading-relaxed max-w-xl mx-auto mb-6 sm:mb-8 text-balance animate-cascade-in"
+          className="font-sans-editorial text-xs sm:text-sm md:text-base text-[var(--text-secondary)] font-light leading-relaxed max-w-xl mx-auto mb-5 sm:mb-6 px-4 text-balance animate-cascade-in"
           style={{ animationDelay: '460ms' }}
         >
           {profile.conciseIntroduction}
         </p>
 
-        {/* 1. Essential Navigation (Equal Separator Length: max-w-xs) */}
+        {/* 3. Essential Navigation (Equal Separator Length: max-w-xs) */}
         <nav
           aria-label="Essential Navigation"
-          className="flex justify-center items-center gap-8 sm:gap-14 pt-3 border-t border-[var(--border-subtle)] w-full max-w-xs text-xs sm:text-sm font-mono-metadata animate-cascade-in"
+          className="flex justify-center items-center gap-8 sm:gap-14 pt-3 sm:pt-4 border-t border-[var(--border-subtle)] w-full max-w-xs text-xs sm:text-sm font-mono-metadata animate-cascade-in"
           style={{ animationDelay: '580ms' }}
         >
           <button
-            onClick={() => setActiveOverlay('works')}
-            className="group inline-flex items-center gap-1.5 text-[var(--text-primary)] hover:text-[var(--accent-cyan-restrained)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--accent-cyan-restrained)] relative py-1"
+            onClick={() => handleOpenOverlay('works')}
+            className="group inline-flex items-center gap-1.5 text-[var(--text-primary)] hover:text-[var(--accent-cyan-restrained)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--accent-cyan-restrained)] relative py-1 cursor-pointer"
           >
             <span className="tracking-wider uppercase">Researches</span>
             <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-secondary)] group-hover:text-[var(--accent-cyan-restrained)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -177,8 +194,8 @@ export default function App() {
           </button>
 
           <button
-            onClick={() => setActiveOverlay('projects')}
-            className="group inline-flex items-center gap-1.5 text-[var(--text-primary)] hover:text-[var(--accent-cyan-restrained)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--accent-cyan-restrained)] relative py-1"
+            onClick={() => handleOpenOverlay('projects')}
+            className="group inline-flex items-center gap-1.5 text-[var(--text-primary)] hover:text-[var(--accent-cyan-restrained)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--accent-cyan-restrained)] relative py-1 cursor-pointer"
           >
             <span className="tracking-wider uppercase">Projects</span>
             <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-secondary)] group-hover:text-[var(--accent-cyan-restrained)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -196,7 +213,7 @@ export default function App() {
 
         {/* 3. Interactive Social Icons */}
         <div
-          className="flex items-center justify-center gap-2 sm:gap-3 mt-4 w-full max-w-xs mx-auto animate-cascade-in"
+          className="flex items-center justify-center gap-2 sm:gap-3 mt-3 sm:mt-4 w-full max-w-xs mx-auto animate-cascade-in"
           style={{ animationDelay: '820ms' }}
         >
           {profile.socialHandles?.github && (
@@ -205,7 +222,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
-              className="flex items-center justify-center p-2 rounded-md text-[var(--text-secondary)] hover:text-[var(--accent-cyan-restrained)] transition-all duration-500 ease-in-out"
+              className="flex items-center justify-center p-2 rounded-md text-[var(--text-secondary)] hover:text-[var(--accent-cyan-restrained)] transition-all duration-500 ease-in-out cursor-pointer"
             >
               <Github className="w-4 h-4 transition-transform duration-500" />
             </a>
@@ -221,7 +238,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube Channel"
-              className="flex items-center justify-center p-2 rounded-md text-[var(--text-secondary)] hover:text-[var(--accent-cyan-restrained)] transition-all duration-500 ease-in-out"
+              className="flex items-center justify-center p-2 rounded-md text-[var(--text-secondary)] hover:text-[var(--accent-cyan-restrained)] transition-all duration-500 ease-in-out cursor-pointer"
             >
               <Youtube className="w-4 h-4 transition-transform duration-500" />
             </a>
@@ -237,7 +254,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram Profile"
-              className="flex items-center justify-center p-2 rounded-md text-[var(--text-secondary)] hover:text-[var(--accent-cyan-restrained)] transition-all duration-500 ease-in-out"
+              className="flex items-center justify-center p-2 rounded-md text-[var(--text-secondary)] hover:text-[var(--accent-cyan-restrained)] transition-all duration-500 ease-in-out cursor-pointer"
             >
               <Instagram className="w-4 h-4 transition-transform duration-500" />
             </a>
@@ -249,7 +266,7 @@ export default function App() {
           <button
             onClick={handleShareProfile}
             aria-label="Share Profile"
-            className="flex items-center justify-center p-2 rounded-md text-[var(--text-secondary)] hover:text-[var(--accent-cyan-restrained)] transition-all duration-500 ease-in-out"
+            className="flex items-center justify-center p-2 rounded-md text-[var(--text-secondary)] hover:text-[var(--accent-cyan-restrained)] transition-all duration-500 ease-in-out cursor-pointer"
           >
             {copiedShare ? (
               <Check className="w-4 h-4 text-emerald-500" />
@@ -266,11 +283,12 @@ export default function App() {
       {/* Cross-fade Theme Wash Overlay */}
       <ThemeTransitionOverlay isLightMode={isLightMode} trigger={themeToggleCount} />
 
-      {/* Full-Screen Dialog Views with Zoom Motion Blur */}
+      {/* Full-Screen Dialog Views with Coordinated Zoom Motion Blur */}
       {activeOverlay && (
         <CompactOverlays
           activeOverlay={activeOverlay}
-          onClose={() => setActiveOverlay(null)}
+          isClosing={isOverlayClosing}
+          onClose={handleCloseOverlay}
           profile={profile}
         />
       )}

@@ -307,37 +307,47 @@ html.theme-light .grain-subtle {
   animation-name: fadeOut;
 }
 
-/* Smooth Zoom Motion Blur Entrance & Exit */
+/* Smooth Optical Motion Blur Transitions (Entrance & Exit) */
 @keyframes zoomMotionBlurIn {
-  from {
+  0% {
     opacity: 0;
-    transform: scale(1.06);
-    filter: blur(16px);
+    transform: scale(1.04);
+    filter: blur(12px);
   }
-  to {
+  60% {
+    filter: blur(1.5px);
+  }
+  100% {
     opacity: 1;
     transform: scale(1);
-    filter: blur(0px);
+    filter: blur(0);
   }
 }
 
 @keyframes zoomMotionBlurOut {
-  from {
+  0% {
     opacity: 1;
     transform: scale(1);
-    filter: blur(0px);
+    filter: blur(0);
   }
-  to {
+  40% {
+    filter: blur(2px);
+  }
+  100% {
     opacity: 0;
-    transform: scale(0.94);
-    filter: blur(16px);
+    transform: scale(0.96);
+    filter: blur(12px);
   }
 }
 
 .animate-zoom-blur-in {
-  animation: zoomMotionBlurIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: zoomMotionBlurIn 0.48s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+  transform-origin: center center;
 }
 
 .animate-zoom-blur-out {
-  animation: zoomMotionBlurOut 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: zoomMotionBlurOut 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+  transform-origin: center center;
 }

@@ -1,104 +1,150 @@
-/**
- * NOIR SIGNAL — CENTRAL PROFILE DATA
- * 
- * ============================================================================
- * EDITABLE DIGITAL IDENTITY
- * To personalize this profile:
- * 1. Modify fullName, descriptor, location, and personalStatement below.
- * 2. Configure your direct email and external links.
- * 3. Add up to 3 selected-work entries (or leave empty [] to cleanly hide).
- * ============================================================================
- */
-
 import { ProfileData } from '../types/profile';
 
 export const defaultProfile: ProfileData = {
-  id: 'Omar Abu Alnasr',
-  fullName: 'Omar Abu Alnasr',
-  monogram: 'EV',
-  editorialIdentifier: 'RESEARCH IN INTELLIGENT SYSTEMS · MATHEMATICAL ONTOLOGIES',
-  descriptor: 'Independent Researcher & Systems Architect',
-  location: 'Oxford / London',
-  professionalDirection:
-    'Investigating foundational intelligence architectures, mathematical graph ontologies, and long-arc archival preservation.',
+  fullName: 'John Doe Smith',
+  professionalDirection: 'Math · AI · Biology',
   conciseIntroduction:
-    'Exploring how structural clarity, formal verification, and deliberate editorial restraint allow complex ideas to remain transparent, durable, and human-aligned.',
-  personalStatement:
-    'Investigating enduring architectures of human inquiry — constructing resilient knowledge frameworks that outlast ephemeral digital cycles.',
-  extendedBio: [
-    'My practice examines how structural design, open archival ontologies, and deliberate restraint enable ideas to endure across decades.',
-    'Working across information architecture, spatial documentation, and independent research, I focus on systems where clarity and durability take precedence over speed.',
-  ],
-  principles: [
-    'Durability over velocity: measure impact by what remains legible twenty years from now.',
-    'Typographic discipline: eliminate decorative noise so structural thought stands on its own rigor.',
-    'Material grounding: balance abstract computational models with physical artifacts and field surveys.',
-  ],
-  email: 'elena.vance@inquiry.archive',
-  socials: [
-    {
-      platform: 'Digital Archive',
-      handle: 'archive.elenavance.org',
-      url: 'https://example.org/archive',
-    },
-    {
-      platform: 'Research Index',
-      handle: 'orcid.org/0000-0002-1829-441X',
-      url: 'https://orcid.org',
-    },
-    {
-      platform: 'Field Notebooks',
-      handle: '@elenavance',
-      url: 'https://example.org/field-notes',
-    },
-  ],
+    "I'm fascinated by the way maths discovers patterns, the way AI learns and reasons, and the role of both the human mind and DNA in life. I'm very interested in the links between all these areas, from the logic of intelligent systems to the biology of life itself.",
+  email: 'personal.ac.oa@gmail.com',
   socialHandles: {
-    github: 'hhttps://github.com/omarabualnasr',
-    youtube: 'https://www.youtube.com/@oasstudio',
-    instagram: 'https://www.instagram.com/oaasstudio/',
+    github: 'https://github.com',
+    youtube: 'https://youtube.com',
+    instagram: 'https://instagram.com',
   },
   selectedWorks: [
     {
-      id: 'work-01',
+      id: 'research-01',
       number: '01',
-      title: 'The Civic Memory Corpus',
-      category: 'Open Archival Framework',
-      year: '2025',
+      title: 'Future AI Research',
       summary:
-        'A public-access archival standard preserving community oral histories and municipal land records across non-proprietary schemas.',
-      overview:
-        'A three-year initiative establishing decentralized metadata protocols for 1,840 at-risk historical records, accompanied by an annual letterpress reference catalog.',
-      tags: ['Information Architecture', 'Open Standards', 'Archival Systems'],
-      destinationUrl: 'https://example.org/civic-corpus',
-      accentTone: '#8BE8FF',
+        'Investigating foundational intelligence architectures, cognitive model scaling, autonomous symbolic learning, and next-generation reasoning paradigms.',
+      destinationUrl: 'https://example.org/future-ai',
     },
     {
-      id: 'work-02',
+      id: 'research-02',
       number: '02',
-      title: 'Topography of the Margin',
-      category: 'Bibliographic Monograph',
-      year: '2024',
+      title: 'AI & DNA Research',
       summary:
-        'A spatial analysis examining how informal margin annotations shaped mathematical discoveries before formal peer review.',
-      overview:
-        'Survey of 84 rare manuscripts documenting marginalia as an informal conversational medium where dissenting scientific conjectures were first tested.',
-      tags: ['Historical Bibliography', 'Typography', 'Monograph'],
-      destinationUrl: 'https://example.org/topography-margin',
-      accentTone: '#94A3B8',
+        'Exploring deep learning representations of genomic sequences, synthetic biology pathways, macromolecular folding, and the biology of life itself.',
+      destinationUrl: 'https://example.org/ai-dna',
     },
     {
-      id: 'work-03',
+      id: 'research-03',
       number: '03',
-      title: 'The Silent Atlas',
-      category: 'Cartographic Field Survey',
-      year: '2024',
+      title: 'New Programming Language & AI Research',
       summary:
-        'An eight-month foot survey documenting unpaved Neolithic holloways and historic rights-of-way across Southern England.',
-      overview:
-        'Vector topological mapping combining high-precision field GPS logging with historical enclosure maps to legally safeguard contested public paths.',
-      tags: ['Cartography', 'Field Research', 'Spatial Analysis'],
-      destinationUrl: 'https://example.org/downs-atlas',
-      accentTone: '#7DD3FC',
+        'Developing a modern, formally verified programming language designed from first principles for native AI workloads, compiler proofs, and neural symbiosis.',
+      destinationUrl: 'https://example.org/new-lang-ai',
+    },
+  ],
+  projectGroups: [
+    {
+      categoryTitle: 'Apps',
+      projects: [
+        {
+          id: 'app-01',
+          number: '01',
+          title: 'The Color Palette',
+          summary:
+            "I'm fascinated by the way maths discovers patterns, the way AI learns and reasons, and the role of both the human mind and DNA in life. I'm very interested in the links between all these areas, from the logic of intelligent systems to the biology of life itself.I'm fascinated by the way maths discovers patterns, the way AI learns and reasons, and the role of both the human mind and DNA in life. I'm very interested in the links between all these areas, from the logic of intelligent systems to the biology of life itself.",
+          destinationUrl: 'https://example.org/color-palette',
+        },
+        {
+          id: 'app-02',
+          number: '02',
+          title: 'The Power Menu',
+          summary:
+            'A keyboard-first launcher and power execution workflow replacing traditional system menus with zero-latency dispatch.',
+          destinationUrl: 'https://example.org/power-menu',
+        },
+        {
+          id: 'app-03',
+          number: '03',
+          title: 'The Calendar',
+          summary:
+            'A minimalist time-mapping interface emphasizing temporal density, uninterrupted focus blocks, and cyclical scheduling.',
+          destinationUrl: 'https://example.org/calendar',
+        },
+        {
+          id: 'app-04',
+          number: '04',
+          title: 'The Blocks',
+          summary:
+            'A spatial computing canvas organizing disparate notes, media fragments, and thoughts into structured, draggable blocks.',
+          destinationUrl: 'https://example.org/blocks',
+        },
+        {
+          id: 'app-05',
+          number: '05',
+          title: 'The Widgets',
+          summary:
+            'Glanceable micro-instruments monitoring compute metrics, bio-signals, and live telemetry without contextual interruption.',
+          destinationUrl: 'https://example.org/widgets',
+        },
+        {
+          id: 'app-06',
+          number: '06',
+          title: 'The App Builder',
+          summary:
+            'A visual declarative sandbox generating production-grade TypeScript components and headless schemas from natural intent.',
+          destinationUrl: 'https://example.org/app-builder',
+        },
+        {
+          id: 'app-07',
+          number: '07',
+          title: 'The Health Calculator',
+          summary:
+            'A private mathematical modeling tool computing metabolic benchmarks, biomarker trends, and circadian recovery cycles.',
+          destinationUrl: 'https://example.org/health-calculator',
+        },
+      ],
+    },
+    {
+      categoryTitle: 'UI',
+      projects: [
+        {
+          id: 'ui-01',
+          number: '08',
+          title: 'The Web UI',
+          summary:
+            'An architectural design system and component library built with strict typographic rhythm, tactile feedback, and restrained aesthetics.',
+          destinationUrl: 'https://example.org/web-ui',
+        },
+      ],
+    },
+    {
+      categoryTitle: 'Wiki',
+      projects: [
+        {
+          id: 'wiki-01',
+          number: '09',
+          title: 'The Math Wiki',
+          summary:
+            'An open interactive compendium mapping interconnected theorems, foundational axioms, and formal mathematical proofs.',
+          destinationUrl: 'https://example.org/math-wiki',
+        },
+      ],
+    },
+    {
+      categoryTitle: 'AI Projects',
+      projects: [
+        {
+          id: 'ai-01',
+          number: '10',
+          title: 'Arab Lens',
+          summary:
+            'A computer vision and OCR pipeline specializing in Arabic calligraphy restoration, historical manuscript digitization, and semantic search.',
+          destinationUrl: 'https://example.org/arab-lens',
+        },
+        {
+          id: 'ai-02',
+          number: '11',
+          title: 'The ML',
+          summary:
+            'An interactive browser-native machine learning workbench for visual neural network experimentation and latent space navigation.',
+          destinationUrl: 'https://example.org/the-ml',
+        },
+      ],
     },
   ],
 };
