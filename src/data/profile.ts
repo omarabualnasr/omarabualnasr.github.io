@@ -1,15 +1,15 @@
 import { ProfileData } from '../types/profile';
 
 export const defaultProfile: ProfileData = {
-  fullName: 'John Doe Smith',
+  fullName: 'Omar Abu Alnasr',
   professionalDirection: 'Math · AI · Biology',
   conciseIntroduction:
     "I'm fascinated by the way maths discovers patterns, the way AI learns and reasons, and the role of both the human mind and DNA in life. I'm very interested in the links between all these areas, from the logic of intelligent systems to the biology of life itself.",
-  email: 'personal.ac.oa@gmail.com',
+  email: 'work.ac.oa@gmail.com',
   socialHandles: {
-    github: 'https://github.com',
-    youtube: 'https://youtube.com',
-    instagram: 'https://instagram.com',
+    github: 'https://github.com/omarabualnasr/',
+    youtube: 'https://www.youtube.com/@oasstudio',
+    instagram: 'https://www.instagram.com/oaasstudio/',
   },
   selectedWorks: [
     {
