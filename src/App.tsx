@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { SiBehance } from 'react-icons/si';
 import { defaultProfile } from './data/profile';
 import { ProfileData } from './types/profile';
 import LightRays from './components/reactbits/LightRays';
