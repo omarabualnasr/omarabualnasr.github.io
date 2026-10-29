@@ -10,6 +10,7 @@ export const defaultProfile: ProfileData = {
     github: 'https://github.com/omarabualnasr/',
     youtube: 'https://www.youtube.com/@oasstudio',
     instagram: 'https://www.instagram.com/oaasstudio/',
+    behance: 'https://www.behance.net/oas-studio',
   },
   selectedWorks: [
     {
