@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { SiBehance } from 'react-icons/si';
 import { defaultProfile } from './data/profile';
 import { ProfileData } from './types/profile';
 import LightRays from './components/reactbits/LightRays';
@@ -10,6 +9,7 @@ import { QuickContactBox } from './components/QuickContactBox';
 import { ThemeTransitionOverlay } from './components/ThemeTransitionOverlay';
 import { IdentityCard } from './components/IdentityCard';
 import { ArrowUpRight, Github, Youtube, Instagram, Share2, Check } from 'lucide-react';
+import { SiBehance } from 'react-icons/si';
 
 export default function App() {
   const [profile] = useState<ProfileData>(defaultProfile);
@@ -258,6 +258,22 @@ export default function App() {
               className="flex items-center justify-center p-2 rounded-md text-[var(--text-secondary)] hover:text-[var(--accent-cyan-restrained)] transition-all duration-500 ease-in-out cursor-pointer"
             >
               <Instagram className="w-4 h-4 transition-transform duration-500" />
+            </a>
+          )}
+
+          {profile.socialHandles?.instagram && profile.socialHandles?.behance && (
+            <div className="h-3.5 w-px bg-[var(--border-subtle)] shrink-0" aria-hidden="true" />
+          )}
+
+          {profile.socialHandles?.behance && (
+            <a
+              href={profile.socialHandles.behance}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Behance Profile"
+              className="flex items-center justify-center p-2 rounded-md text-[var(--text-secondary)] hover:text-[var(--accent-cyan-restrained)] transition-all duration-500 ease-in-out cursor-pointer"
+            >
+              <SiBehance className="w-4 h-4 transition-transform duration-500" />
             </a>
           )}
 
