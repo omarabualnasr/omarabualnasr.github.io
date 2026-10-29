@@ -20,6 +20,7 @@ export interface ProfileData {
     github?: string;
     youtube?: string;
     instagram?: string;
+    behance?: string;
   };
   selectedWorks?: ProjectItem[];
   projectGroups?: ProjectCategoryGroup[];
