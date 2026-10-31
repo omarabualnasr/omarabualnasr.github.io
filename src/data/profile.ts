@@ -16,26 +16,10 @@ export const defaultProfile: ProfileData = {
     {
       id: 'research-01',
       number: '01',
-      title: 'Future AI Research',
-      summary:
-        '',
-      destinationUrl: 'https://github.com/omarabualnasr/Future-AI-Research',
-    },
-    {
-      id: 'research-02',
-      number: '02',
       title: 'AI & DNA Research',
       summary:
         '',
       destinationUrl: 'https://github.com/omarabualnasr/AI-DNA-Research',
-    },
-    {
-      id: 'research-03',
-      number: '03',
-      title: 'New Programming Language & AI Research',
-      summary:
-        '',
-      destinationUrl: 'https://github.com/omarabualnasr/New-Programming-Language-AI-Research',
     },
   ],
   projectGroups: [
