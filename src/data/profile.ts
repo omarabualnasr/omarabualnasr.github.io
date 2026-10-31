@@ -19,7 +19,7 @@ export const defaultProfile: ProfileData = {
       title: 'AI & DNA Research',
       summary:
         '',
-      destinationUrl: 'https://github.com/omarabualnasr/AI-DNA-Research',
+      destinationUrl: 'https://github.com/omarabualnasr/AIDNAResearch',
     },
   ],
   projectGroups: [
@@ -32,7 +32,7 @@ export const defaultProfile: ProfileData = {
           title: 'The Color Palette',
           summary:
             "",
-          destinationUrl: 'https://github.com/omarabualnasr/The-Color-Palette',
+          destinationUrl: 'https://github.com/omarabualnasr/TheColorPalette',
         },
         {
           id: 'app-02',
@@ -40,7 +40,7 @@ export const defaultProfile: ProfileData = {
           title: 'The Power Menu',
           summary:
             '',
-          destinationUrl: 'https://github.com/omarabualnasr/The-Power-Menu',
+          destinationUrl: 'https://github.com/omarabualnasr/ThePowerMenu',
         },
         {
           id: 'app-03',
@@ -48,39 +48,23 @@ export const defaultProfile: ProfileData = {
           title: 'The Calendar',
           summary:
             '',
-          destinationUrl: 'https://github.com/omarabualnasr/The-Calendar',
+          destinationUrl: 'https://github.com/omarabualnasr/TheCalendar',
         },
         {
           id: 'app-04',
           number: '04',
-          title: 'The Blocks',
+          title: 'Text Motion Studio',
           summary:
             '',
-          destinationUrl: 'https://github.com/omarabualnasr/The-Blocks',
+          destinationUrl: 'https://github.com/omarabualnasr/TextMotionStudio',
         },
         {
           id: 'app-05',
           number: '05',
-          title: 'The Widgets',
-          summary:
-            '',
-          destinationUrl: 'https://github.com/omarabualnasr/The-Widgets',
-        },
-        {
-          id: 'app-06',
-          number: '06',
-          title: 'The App Builder',
-          summary:
-            '',
-          destinationUrl: 'https://github.com/omarabualnasr/The-App-Builder',
-        },
-        {
-          id: 'app-07',
-          number: '07',
           title: 'The Health Calculator',
           summary:
             '',
-          destinationUrl: 'https://github.com/omarabualnasr/The-Health-Calculator',
+          destinationUrl: 'https://github.com/omarabualnasr/TheHealthCalculator',
         },
       ],
     },
@@ -89,11 +73,11 @@ export const defaultProfile: ProfileData = {
       projects: [
         {
           id: 'ui-01',
-          number: '08',
+          number: '06',
           title: 'The Web UI',
           summary:
             '',
-          destinationUrl: 'https://github.com/omarabualnasr/The-Web-UI',
+          destinationUrl: 'https://github.com/omarabualnasr/TheWebUI',
         },
       ],
     },
@@ -102,12 +86,13 @@ export const defaultProfile: ProfileData = {
       projects: [
         {
           id: 'wiki-01',
-          number: '09',
+          number: '07',
           title: 'The Math Wiki',
           summary:
             '',
-          destinationUrl: 'https://github.com/omarabualnasr/The-Math-Wiki',
+          destinationUrl: 'https://github.com/omarabualnasr/TheMathWiki',
         },
+        
       ],
     },
     {
@@ -115,19 +100,19 @@ export const defaultProfile: ProfileData = {
       projects: [
         {
           id: 'ai-01',
-          number: '10',
-          title: 'Arab Lens',
+          number: '8',
+          title: 'MiniGPT',
           summary:
             '',
-          destinationUrl: 'https://github.com/omarabualnasr/Arab-Lens',
+          destinationUrl: 'https://github.com/omarabualnasr/MiniGPT',
         },
-        {
+                {
           id: 'ai-02',
-          number: '11',
-          title: 'The ML',
+          number: '9',
+          title: 'SmartCPUAIInstaller',
           summary:
             '',
-          destinationUrl: 'https://github.com/omarabualnasr/The-ML',
+          destinationUrl: 'https://github.com/omarabualnasr/SmartCPUAIInstaller',
         },
       ],
     },
